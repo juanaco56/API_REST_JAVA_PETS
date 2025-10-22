@@ -8,6 +8,8 @@ RUN apt-get update && apt-get install -y libpq-dev \
 COPY FRONTEND/ /var/www/html/
 
 
+RUN chown -R www-data:www-data /var/www/html/
+
 # Habilita mod_rewrite para URLs amigables
 RUN a2enmod rewrite
 
