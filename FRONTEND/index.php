@@ -1,5 +1,5 @@
 <?php 
-    $apiUrl = getenv('API_URL');
+    $apiUrl = getenv('https://api-rest-java-pets.onrender.com');
     $data = @file_get_contents($url);
     $pets = json_decode($data, true) ?? [];
 ?>
