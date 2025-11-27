@@ -1,5 +1,5 @@
 <?php 
-    $url = "http://host.docker.internal:8080/pet/listado";
+    $apiUrl = getenv('API_URL');
     $data = @file_get_contents($url);
     $pets = json_decode($data, true) ?? [];
 ?>
